@@ -4,9 +4,11 @@
     <color name="purple_500">#7B50B8</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
-    <color name="violett">#FF7B50B8</color>
+    <color name="violett">#FF872CD6</color>
     <color name="lime_light">#FFBAC551</color>
     <color name="teal_700">#BAC551</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="fukhsia">#FFB92AD3</color>
+
 </resources>
