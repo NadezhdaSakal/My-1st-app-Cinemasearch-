@@ -144,7 +144,8 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/poster8"
             android:clickable="true"
-            android:stateListAnimator="@animator/animation_press"            android:layout_width="150dp"
+            android:stateListAnimator="@animator/animation_press"
+            android:layout_width="150dp"
             android:layout_height="200dp"
             app:cardCornerRadius="15dp">
 
