@@ -1,5 +1,6 @@
 package com.sakal_n.myapplicationcinemasearch
 
+
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -19,6 +20,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.sakal_n.myapplicationcinemasearch", appContext.packageName)
+        assertEquals("com.amsdevelops.filmssearch", appContext.packageName)
     }
 }
