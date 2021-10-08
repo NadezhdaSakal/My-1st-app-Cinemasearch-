@@ -9,12 +9,6 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import java.util.*
-import android.transition.Scene
-import android.transition.Slide
-import android.transition.TransitionManager
-import android.transition.TransitionSet
-import android.view.Gravity
-import kotlinx.android.synthetic.main.merge_home_screen_content.*
 
 
 class HomeFragment : Fragment() {
@@ -52,24 +46,24 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val scene = Scene.getSceneForLayout(home_fragment_root, R.layout.merge_home_screen_content, requireContext())
+        AnimationHelper.performFragmentCircularRevealAnimation(home_fragment_root, requireActivity(), 1)
 
-        val searchSlide = Slide(Gravity.TOP).addTarget(R.id.search_view)
+        initSearchView()
 
-        val recyclerSlide = Slide(Gravity.BOTTOM).addTarget(R.id.main_recycler)
+        //находим наш RV
+        initRecyckler()
+        //Кладем нашу БД в RV
+        filmsAdapter.addItems(filmsDataBase)
+    }
 
-        val customTransition = TransitionSet().apply {
-            duration = 500
-            addTransition(recyclerSlide)
-            addTransition(searchSlide)
-        }
-        TransitionManager.go(scene, customTransition)
+    private fun initSearchView() {
+
 
         search_view.setOnClickListener {
             search_view.isIconified = false
         }
 
-        search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+        search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return true
@@ -80,15 +74,15 @@ class HomeFragment : Fragment() {
                     return true
                 }
                 val result = filmsDataBase.filter {
-                    it.title.toLowerCase(Locale.getDefault()).contains(newText.toLowerCase(Locale.getDefault()))
+                    it.title.toLowerCase(Locale.getDefault())
+                        .contains(newText.toLowerCase(Locale.getDefault()))
                 }
                 filmsAdapter.addItems(result)
                 return true
             }
         })
 
-        initRecyckler()
-        filmsAdapter.addItems(filmsDataBase)
+
     }
 
     private fun initRecyckler() {
