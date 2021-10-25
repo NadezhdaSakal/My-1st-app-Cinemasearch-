@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 //import kotlinx.android.synthetic
 import kotlinx.android.synthetic.main.fragment_details.*
 import android.content.Intent
+import android.widget.Toast
+
 
 
 class DetailsFragment : Fragment() {
