@@ -1,4 +1,4 @@
-package com.sakal_n.myapplicationcinemasearch
+package com.sakal_n.myapplicationcinemasearch.domain
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

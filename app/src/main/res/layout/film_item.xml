@@ -6,7 +6,7 @@
     android:layout_height="150dp">
 
 
-    <com.sakal_n.myapplicationcinemasearch.RatingDonutView
+    <com.sakal_n.myapplicationcinemasearch.view.customviews.RatingDonutView
         android:id="@+id/rating_donut"
         android:layout_width="50dp"
         android:layout_height="50dp"

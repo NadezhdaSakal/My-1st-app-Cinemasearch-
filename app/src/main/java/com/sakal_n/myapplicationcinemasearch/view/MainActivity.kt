@@ -1,18 +1,24 @@
-package com.sakal_n.myapplicationcinemasearch
+package com.sakal_n.myapplicationcinemasearch.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_main.*
+import com.sakal_n.myapplicationcinemasearch.*
+import com.sakal_n.myapplicationcinemasearch.databinding.ActivityMainBinding
+import com.sakal_n.myapplicationcinemasearch.domain.Film
+import com.sakal_n.myapplicationcinemasearch.view.fragments.*
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //Инициализируем объект
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        //Передаем его в метод
+        setContentView(binding.root)
 
         initNavigation()
-
         //Зупускаем фрагмент при старте
         supportFragmentManager
             .beginTransaction()
@@ -41,9 +47,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initNavigation() {
-
-        bottom_navigation.setOnNavigationItemSelectedListener {
-
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
                     val tag = "home"
@@ -53,12 +57,10 @@ class MainActivity : AppCompatActivity() {
                     changeFragment( fragment?: HomeFragment(), tag)
                     true
                 }
-
                 R.id.favorites -> {
                     val tag = "favorites"
                     val fragment = checkFragmentExistence(tag)
                     changeFragment( fragment?: FavoritesFragment(), tag)
-
                     true
                 }
                 R.id.watch_later -> {
@@ -77,6 +79,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     //Ищем фрагмент по тэгу, если он есть то возвращаем его, если нет - то null
     private fun checkFragmentExistence(tag: String): Fragment? = supportFragmentManager.findFragmentByTag(tag)
 
@@ -87,5 +90,4 @@ class MainActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
-
 }

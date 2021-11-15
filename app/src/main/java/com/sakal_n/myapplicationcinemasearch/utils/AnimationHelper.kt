@@ -1,4 +1,4 @@
-package com.sakal_n.myapplicationcinemasearch
+package com.sakal_n.myapplicationcinemasearch.utils
 
 import android.app.Activity
 import android.view.View

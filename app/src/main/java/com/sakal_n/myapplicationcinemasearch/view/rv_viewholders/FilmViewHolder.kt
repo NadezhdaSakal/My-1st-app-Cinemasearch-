@@ -1,7 +1,8 @@
-package com.sakal_n.myapplicationcinemasearch
+package com.sakal_n.myapplicationcinemasearch.view.rv_viewholders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.sakal_n.myapplicationcinemasearch.domain.Film
 import kotlinx.android.synthetic.main.film_item.view.*
 import com.bumptech.glide.Glide
 
