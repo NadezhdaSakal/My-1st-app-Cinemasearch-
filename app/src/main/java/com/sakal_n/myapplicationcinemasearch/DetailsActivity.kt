@@ -19,7 +19,7 @@ class DetailsActivity : AppCompatActivity() {
         //Устанавливаем заголовок
         details_toolbar.title = film.title
         //Устанавливаем картинку
-        details_poster.setImageResource(film.poster)
+        details_poster.setImageResource (film.poster)
         //Устанавливаем описание
         details_description.text = film.description
     }
