@@ -1,11 +1,11 @@
 package com.sakal_n.myapplicationcinemasearch.domain
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 
-data class Film(
+data class Film (
     val title: String,
     val poster: String,
     val description: String,
