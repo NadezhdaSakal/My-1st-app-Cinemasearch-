@@ -13,6 +13,7 @@ class App : Application() {
         instance = this
 
         //Создаем компонент
+
         dagger = DaggerAppComponent.create()
     }
 

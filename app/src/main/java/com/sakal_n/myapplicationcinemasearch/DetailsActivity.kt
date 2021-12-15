@@ -13,14 +13,17 @@ class DetailsActivity : AppCompatActivity() {
     }
 
     private fun setFilmsDetails(detaiils_title: Any, details_poster: Any, details_description: Any) {
+
         //Получаем наш фильм из переданного бандла
         val film = intent.extras?.get("film") as Film
 
         //Устанавливаем заголовок
         detaiils_title.title = film.title
         //Устанавливаем картинку
+
         details_poster.setImageResource (film.poster)
         //Устанавливаем описание
+
         details_description.text = film.description
     }
 }
