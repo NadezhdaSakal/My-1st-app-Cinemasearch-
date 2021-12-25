@@ -1,7 +1,6 @@
 package com.sakal_n.myapplicationcinemasearch
 
 import android.app.Application
-
 import com.sakal_n.myapplicationcinemasearch.di.AppComponent
 import com.sakal_n.myapplicationcinemasearch.di.DaggerAppComponent
 
