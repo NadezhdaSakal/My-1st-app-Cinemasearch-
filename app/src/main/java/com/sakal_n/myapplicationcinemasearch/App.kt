@@ -8,7 +8,6 @@ import com.sakal_n.myapplicationcinemasearch.di.modules.DomainModule
 import com.sakal_n.myapplicationcinemasearch.di.modules.RemoteModule
 
 
-
 class App : Application() {
     lateinit var dagger: AppComponent
 

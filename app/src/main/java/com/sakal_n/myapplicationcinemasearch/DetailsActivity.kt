@@ -3,6 +3,7 @@ package com.sakal_n.myapplicationcinemasearch
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sakal_n.myapplicationcinemasearch.domain.Film
+
 import kotlinx.android.synthetic.main.activity_details.*
 
 class DetailsActivity : AppCompatActivity() {
