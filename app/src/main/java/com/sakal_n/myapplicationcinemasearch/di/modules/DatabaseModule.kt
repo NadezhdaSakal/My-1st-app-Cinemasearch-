@@ -1,4 +1,4 @@
-package com.sakal_n.myapplicationcinemasearch.di
+package com.sakal_n.myapplicationcinemasearch.di.modules
 
 import com.sakal_n.myapplicationcinemasearch.data.MainRepository
 import dagger.Module
