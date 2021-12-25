@@ -4,6 +4,7 @@ import com.sakal_n.myapplicationcinemasearch.di.modules.DatabaseModule
 import com.sakal_n.myapplicationcinemasearch.di.modules.DomainModule
 import com.sakal_n.myapplicationcinemasearch.di.modules.RemoteModule
 import com.sakal_n.myapplicationcinemasearch.viewmodel.HomeFragmentViewModel
+import com.sakal_n.myapplicationcinemasearch.viewmodel.SettingsFragmentViewModel
 import dagger.Component
 import javax.inject.Singleton
 
@@ -17,6 +18,9 @@ import javax.inject.Singleton
     ]
 )
 interface AppComponent {
-    //метод для того, чтобы появилась внедрять зависимости в HomeFragmentViewModel
+    //метод для того, чтобы появилась возможность внедрять зависимости в HomeFragmentViewModel
     fun inject(homeFragmentViewModel: HomeFragmentViewModel)
+    //метод для того, чтобы появилась возможность внедрять зависимости в SettingsFragmentViewModel
+    fun inject(settingsFragmentViewModel: SettingsFragmentViewModel)
+
 }
