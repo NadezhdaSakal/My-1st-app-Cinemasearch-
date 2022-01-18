@@ -1,6 +1,6 @@
 package com.sakal_n.myapplicationcinemasearch.data
 
-import com.sakal_n.myapplicationcinemasearch.data.Entity.TmdbResults
+import com.sakal_n.myapplicationcinemasearch.data.entity.TmdbResults
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

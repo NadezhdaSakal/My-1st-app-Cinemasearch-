@@ -1,8 +1,9 @@
 package com.sakal_n.myapplicationcinemasearch.domain
 
 import com.sakal_n.myapplicationcinemasearch.data.*
-import com.sakal_n.myapplicationcinemasearch.data.Entity.API
-import com.sakal_n.myapplicationcinemasearch.data.Entity.TmdbResults
+import com.sakal_n.myapplicationcinemasearch.data.entity.API
+import com.sakal_n.myapplicationcinemasearch.data.entity.Film
+import com.sakal_n.myapplicationcinemasearch.data.entity.TmdbResults
 import com.sakal_n.myapplicationcinemasearch.data.preferences.PreferenceProvider
 import com.sakal_n.myapplicationcinemasearch.utils.Converter
 import com.sakal_n.myapplicationcinemasearch.viewmodel.HomeFragmentViewModel
@@ -19,9 +20,8 @@ class Interactor(private val repo: MainRepository, private val retrofitService: 
                 //При успехе мы вызываем метод передаем onSuccess и в этот коллбэк список фильмов
                 val list = Converter.convertApiListToDTOList(response.body()?.tmdbFilms)
                 //Кладем фильмы в бд
-                list.forEach {
-                    repo.putToDb(film = it)
-                }
+                repo.putToDb(list)
+
                 callback.onSuccess(list)
             }
 

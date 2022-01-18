@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.sakal_n.myapplicationcinemasearch.domain.Film
+import com.sakal_n.myapplicationcinemasearch.data.entity.Film
 import com.sakal_n.myapplicationcinemasearch.R
 import com.sakal_n.myapplicationcinemasearch.data.ApiConstants
 import com.sakal_n.myapplicationcinemasearch.databinding.FragmentDetailsBinding
