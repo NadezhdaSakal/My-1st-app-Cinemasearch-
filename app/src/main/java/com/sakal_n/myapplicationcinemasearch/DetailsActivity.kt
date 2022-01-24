@@ -27,3 +27,11 @@ class DetailsActivity : AppCompatActivity() {
     }
 }
 
+//private fun AppCompatImageView.setImageResource(poster: String) {
+
+
+
+//private fun AppCompatImageView.setImageResource(poster: String) {
+
+
+

@@ -2,10 +2,10 @@ package com.sakal_n.myapplicationcinemasearch
 
 import android.app.Application
 import com.sakal_n.myapplicationcinemasearch.di.AppComponent
-import com.sakal_n.myapplicationcinemasearch.di.DaggerAppComponent
 import com.sakal_n.myapplicationcinemasearch.di.modules.DatabaseModule
 import com.sakal_n.myapplicationcinemasearch.di.modules.DomainModule
 import com.sakal_n.myapplicationcinemasearch.di.modules.RemoteModule
+import com.sakal_n.myapplicationcinemasearch.di.DaggerAppComponent
 
 
 class App : Application() {
