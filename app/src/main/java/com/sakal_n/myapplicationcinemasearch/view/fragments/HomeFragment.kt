@@ -7,17 +7,18 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sakal_n.myapplicationcinemasearch.data.entity.Film
-import com.sakal_n.myapplicationcinemasearch.view.rv_adapters.TopSpacingItemDecoration
 import com.sakal_n.myapplicationcinemasearch.databinding.FragmentHomeBinding
 import com.sakal_n.myapplicationcinemasearch.utils.AnimationHelper
 import com.sakal_n.myapplicationcinemasearch.view.MainActivity
 import com.sakal_n.myapplicationcinemasearch.view.rv_adapters.FilmListRecyclerAdapter
+import com.sakal_n.myapplicationcinemasearch.view.rv_adapters.TopSpacingItemDecoration
 import com.sakal_n.myapplicationcinemasearch.viewmodel.HomeFragmentViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.collect
 import java.util.*
 
 
@@ -27,6 +28,7 @@ class HomeFragment : Fragment() {
     }
     private lateinit var filmsAdapter: FilmListRecyclerAdapter
     private lateinit var binding: FragmentHomeBinding
+    private lateinit var scope: CoroutineScope
     private var filmsDataBase = listOf<Film>()
         //Используем backing field
         set(value) {
@@ -64,13 +66,29 @@ class HomeFragment : Fragment() {
         initRecyckler()
 
         //Кладем нашу БД в RV
-        viewModel.filmsListLiveData.observe(viewLifecycleOwner, Observer<List<Film>> {
-            filmsDataBase = it
-            filmsAdapter.addItems(it)
-        })
-        viewModel.showProgressBar.observe(viewLifecycleOwner, Observer<Boolean> {
-            binding.progressBar.isVisible = it
-        })
+        scope = CoroutineScope(Dispatchers.IO).also { scope ->
+            scope.launch {
+                viewModel.filmsListData.collect {
+                    withContext(Dispatchers.Main) {
+                        filmsAdapter.addItems(it)
+                        filmsDataBase = it
+                    }
+                }
+            }
+            scope.launch {
+                for (element in viewModel.showProgressBar) {
+                    launch(Dispatchers.Main) {
+                        binding.progressBar.isVisible = element
+                    }
+                }
+            }
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        scope.cancel()
+
 
     }
     private fun initPullToRefresh() {
