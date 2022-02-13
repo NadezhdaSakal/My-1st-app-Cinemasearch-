@@ -3,7 +3,6 @@ package com.sakal_n.myapplicationcinemasearch
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sakal_n.myapplicationcinemasearch.data.entity.Film
-import kotlinx.android.synthetic.main.activity_details.*
 
 class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
