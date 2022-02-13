@@ -4,15 +4,18 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.sakal_n.myapplicationcinemasearch.data.ApiConstants
 import com.sakal_n.myapplicationcinemasearch.data.entity.Film
-import kotlinx.android.synthetic.main.film_item.view.*
+import com.sakal_n.myapplicationcinemasearch.databinding.FilmItemBinding
 import com.bumptech.glide.Glide
 
 class FilmViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    private val title = itemView.title
-    private val poster = itemView.poster
-    private val description = itemView.description
-    private val ratingDonut = itemView.rating_donut
+    private val filmItemBinding = FilmItemBinding.bind(itemView)
+
+    private val title = filmItemBinding.title
+    private val poster = filmItemBinding.poster
+    private val description = filmItemBinding.description
+
+    private val ratingDonut = filmItemBinding.ratingDonut
 
 
     fun bind(film: Film) {

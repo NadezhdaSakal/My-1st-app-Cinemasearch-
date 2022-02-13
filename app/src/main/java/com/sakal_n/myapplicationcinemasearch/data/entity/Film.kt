@@ -1,7 +1,7 @@
 package com.sakal_n.myapplicationcinemasearch.data.entity
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
