@@ -2,7 +2,7 @@ package com.sakal_n.myapplicationcinemasearch
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_details.*
+import com.sakal_n.myapplicationcinemasearch.data.entity.Film
 
 class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,10 +17,16 @@ class DetailsActivity : AppCompatActivity() {
 
         //Устанавливаем заголовок
         details_toolbar.title = film.title
+
         //Устанавливаем картинку
-        details_poster.setImageResource(film.poster)
+        details_poster.setImageResource (film.poster)
+
         //Устанавливаем описание
         details_description.text = film.description
     }
 }
+
+
+
+
 
