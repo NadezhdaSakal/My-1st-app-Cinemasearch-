@@ -1,11 +1,11 @@
-package com.sakal_n.myapplicationcinemasearch.data
+package ru.devivanov.core_impl
 
-import com.sakal_n.myapplicationcinemasearch.data.entity.TmdbResults
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 import io.reactivex.rxjava3.core.Observable
+import ru.devivanov.core_impl.entity.TmdbResults
+
 
 
 interface TmdbApi {
@@ -15,7 +15,7 @@ interface TmdbApi {
         @Query("api_key") apiKey: String,
         @Query("language") language: String,
         @Query("page") page: Int
-    ): Call<TmdbResults>
+    ): Observable<TmdbResults>
 
     @GET("3/search/movie")
     fun getFilmFromSearch(

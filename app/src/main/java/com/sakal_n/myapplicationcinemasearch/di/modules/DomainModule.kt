@@ -3,7 +3,7 @@ package com.sakal_n.myapplicationcinemasearch.di.modules
 import android.content.Context
 import com.sakal_n.myapplicationcinemasearch.data.MainRepository
 import com.sakal_n.myapplicationcinemasearch.data.preferences.PreferenceProvider
-import com.sakal_n.myapplicationcinemasearch.data.TmdbApi
+import ru.devivanov.core_impl.TmdbApi
 import com.sakal_n.myapplicationcinemasearch.domain.Interactor
 import dagger.Module
 import dagger.Provides

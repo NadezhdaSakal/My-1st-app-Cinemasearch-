@@ -2,10 +2,11 @@ package com.sakal_n.myapplicationcinemasearch.view.rv_viewholders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.sakal_n.myapplicationcinemasearch.data.ApiConstants
 import com.sakal_n.myapplicationcinemasearch.data.entity.Film
 import com.sakal_n.myapplicationcinemasearch.databinding.FilmItemBinding
 import com.bumptech.glide.Glide
+import ru.devivanov.core_impl.entity.ApiConstants
+
 
 class FilmViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

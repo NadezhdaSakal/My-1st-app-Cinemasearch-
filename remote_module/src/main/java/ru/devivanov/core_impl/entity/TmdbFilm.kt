@@ -1,4 +1,4 @@
-package com.sakal_n.myapplicationcinemasearch.data.entity
+package ru.devivanov.core_impl.entity
 
 import com.google.gson.annotations.SerializedName
 

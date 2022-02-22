@@ -1,8 +1,5 @@
-package com.sakal_n.myapplicationcinemasearch.di.modules
+package ru.devivanov.core_impl
 
-import com.sakal_n.myapplicationcinemasearch.BuildConfig
-import com.sakal_n.myapplicationcinemasearch.data.ApiConstants
-import com.sakal_n.myapplicationcinemasearch.data.TmdbApi
 import dagger.Module
 import dagger.Provides
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
@@ -10,6 +7,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import ru.devivanov.core_impl.entity.ApiConstants
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 

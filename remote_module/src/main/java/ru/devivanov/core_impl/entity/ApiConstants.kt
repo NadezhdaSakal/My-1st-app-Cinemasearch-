@@ -1,4 +1,4 @@
-package com.sakal_n.myapplicationcinemasearch.data
+package ru.devivanov.core_impl.entity
 
 object ApiConstants  {
     const val BASE_URL = "https://api.themoviedb.org/"
