@@ -7,9 +7,17 @@ import com.sakal_n.myapplicationcinemasearch.*
 import com.sakal_n.myapplicationcinemasearch.databinding.ActivityMainBinding
 import com.sakal_n.myapplicationcinemasearch.data.entity.Film
 import com.sakal_n.myapplicationcinemasearch.view.fragments.*
+import android.content.BroadcastReceiver
+import android.content.Intent
+import android.content.IntentFilter
+import com.sakal_n.myapplicationcinemasearch.receivers.ConnectionChecker
+
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var receiver: BroadcastReceiver
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +33,19 @@ class MainActivity : AppCompatActivity() {
             .add(R.id.fragment_placeholder, HomeFragment())
             .addToBackStack(null)
             .commit()
+
+        receiver = ConnectionChecker()
+        val filters = IntentFilter().apply {
+            addAction(Intent.ACTION_POWER_CONNECTED)
+            addAction(Intent.ACTION_BATTERY_LOW)
+        }
+        registerReceiver(receiver, filters)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(receiver)
+
 
     }
 

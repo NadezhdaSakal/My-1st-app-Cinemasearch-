@@ -3,7 +3,9 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
 }
+
 apply from: "$project.rootDir/versions.gradle"
+
 
 android {
     compileSdkVersion 31
