@@ -15,6 +15,7 @@ import androidx.fragment.app.viewModels
 import com.sakal_n.myapplicationcinemasearch.R
 import com.sakal_n.myapplicationcinemasearch.data.entity.Film
 import com.sakal_n.myapplicationcinemasearch.databinding.FragmentDetailsBinding
+import com.sakal_n.myapplicationcinemasearch.view.notifications.NotificationHelper
 import com.sakal_n.myapplicationcinemasearch.viewmodel.DetailsFragmentViewModel
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
@@ -74,6 +75,11 @@ class DetailsFragment : Fragment() {
         binding.detailsFabDownloadWp.setOnClickListener {
             performAsyncLoadOfPoster()
         }
+
+        binding.detailsFabWatchLater.setOnClickListener {
+            NotificationHelper.createNotification(requireContext(), film)
+        }
+
     }
 
     override fun onDestroy() {
