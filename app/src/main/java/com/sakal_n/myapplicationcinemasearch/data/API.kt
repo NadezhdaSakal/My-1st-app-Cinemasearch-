@@ -1,0 +1,5 @@
+package com.sakal_n.myapplicationcinemasearch.data
+
+object API  {
+   const val KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMWZkZDBmOTM2YjRjZDg5OThkZGZjMjY4MmU4MzM3NyIsInN1YiI6IjYxYTRjNzBhOWQ2ZTMzMDA2NzY2MGVmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.iUHVqPUQiiJ4NKNU-ycypWC4jQpu_YrOpIQR7V3mtI8"
+}
