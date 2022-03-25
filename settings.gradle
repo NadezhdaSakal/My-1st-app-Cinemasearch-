@@ -1,2 +1,4 @@
 rootProject.name = "My Application Cinemasearch"
+
+include ':remote_module'
 include ':app'
