@@ -11,7 +11,6 @@ import com.sakal_n.myapplicationcinemasearch.view.rv_adapters.FilmListRecyclerAd
 import com.sakal_n.myapplicationcinemasearch.view.rv_adapters.TopSpacingItemDecoration
 import com.sakal_n.myapplicationcinemasearch.databinding.FragmentFavoritesBinding
 import com.sakal_n.myapplicationcinemasearch.utils.AnimationHelper
-import com.sakal_n.myapplicationcinemasearch.view.MainActivity
 
 class FavoritesFragment : Fragment() {
     private lateinit var filmsAdapter: FilmListRecyclerAdapter

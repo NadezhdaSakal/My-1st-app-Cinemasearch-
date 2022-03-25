@@ -5,14 +5,11 @@ import com.sakal_n.myapplicationcinemasearch.di.AppComponent
 import com.sakal_n.myapplicationcinemasearch.di.modules.DatabaseModule
 import com.sakal_n.myapplicationcinemasearch.di.modules.DomainModule
 import com.sakal_n.myapplicationcinemasearch.di.DaggerAppComponent
-import ru.devivanov.core_impl.DaggerRemoteComponent
+import ru.sakal.core_impl.DaggerRemoteComponent
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
 import com.sakal_n.myapplicationcinemasearch.view.notifications.NotificationConstants.CHANNEL_ID
-
-
-
 
 
 class App : Application() {

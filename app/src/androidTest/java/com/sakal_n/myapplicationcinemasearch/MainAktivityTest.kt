@@ -12,7 +12,6 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.sakal_n.myapplicationcinemasearch.view.rv_viewholders.FilmViewHolder
-import com.sakal_n.myapplicationcinemasearch.view.MainActivity
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.allOf
 import org.junit.Rule

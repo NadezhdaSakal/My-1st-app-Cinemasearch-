@@ -9,11 +9,10 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.sakal_n.myapplicationcinemasearch.R
 import com.sakal_n.myapplicationcinemasearch.data.entity.Film
-import com.sakal_n.myapplicationcinemasearch.view.MainActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import ru.devivanov.core_impl.entity.ApiConstants
+import ru.sakal.core_impl.entity.ApiConstants
 
 object NotificationHelper {
     fun createNotification(context: Context, film: Film) {

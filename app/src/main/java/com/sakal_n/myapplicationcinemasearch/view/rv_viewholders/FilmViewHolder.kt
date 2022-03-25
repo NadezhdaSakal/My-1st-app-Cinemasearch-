@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sakal_n.myapplicationcinemasearch.data.entity.Film
 import com.sakal_n.myapplicationcinemasearch.databinding.FilmItemBinding
 import com.bumptech.glide.Glide
-import ru.devivanov.core_impl.entity.ApiConstants
+import ru.sakal.core_impl.entity.ApiConstants
 
 
 class FilmViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

@@ -20,7 +20,7 @@ import com.sakal_n.myapplicationcinemasearch.viewmodel.DetailsFragmentViewModel
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.*
-import ru.devivanov.core_impl.entity.ApiConstants
+import ru.sakal.core_impl.entity.ApiConstants
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap

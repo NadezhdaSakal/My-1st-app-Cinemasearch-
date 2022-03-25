@@ -10,6 +10,7 @@ android {
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
+
     defaultConfig {
         applicationId "com.sakal_n.myapplicationcinemasearch"
         minSdkVersion 21
@@ -39,6 +40,33 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    flavorDimensions "version"
+    productFlavors {
+        basic {
+            dimension "version"
+            applicationIdSuffix ".basic"
+            versionNameSuffix "-basic"
+        }
+        pro {
+            dimension "version"
+            applicationIdSuffix ".pro"
+            versionNameSuffix "-pro"
+        }
+    }
+    sourceSets {
+        basic {
+            java {
+                srcDirs 'src\\basic\\java'
+            }
+        }
+        pro {
+            java {
+                srcDirs 'src\\pro\\java'
+            }
+        }
+    }
+
 }
 
 dependencies {

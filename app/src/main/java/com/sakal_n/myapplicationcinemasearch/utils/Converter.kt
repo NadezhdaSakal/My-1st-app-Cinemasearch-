@@ -1,6 +1,6 @@
 package com.sakal_n.myapplicationcinemasearch.utils
 
-import ru.devivanov.core_impl.entity.TmdbFilm
+import ru.sakal.core_impl.entity.TmdbFilm
 import com.sakal_n.myapplicationcinemasearch.data.entity.Film
 
 

@@ -1,11 +1,10 @@
-package ru.devivanov.core_impl
+package ru.sakal.core_impl
 
+import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
-import io.reactivex.rxjava3.core.Observable
-import ru.devivanov.core_impl.entity.TmdbResults
-
+import ru.sakal.core_impl.entity.TmdbResults
 
 
 interface TmdbApi {

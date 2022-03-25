@@ -5,7 +5,7 @@ import com.sakal_n.myapplicationcinemasearch.di.modules.DomainModule
 import com.sakal_n.myapplicationcinemasearch.viewmodel.HomeFragmentViewModel
 import com.sakal_n.myapplicationcinemasearch.viewmodel.SettingsFragmentViewModel
 import dagger.Component
-import ru.devivanov.core_impl.RemoteProvider
+import ru.sakal.core_impl.RemoteProvider
 import javax.inject.Singleton
 
 @Singleton

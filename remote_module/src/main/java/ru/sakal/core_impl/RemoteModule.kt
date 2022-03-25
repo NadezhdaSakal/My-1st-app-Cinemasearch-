@@ -1,4 +1,4 @@
-package ru.devivanov.core_impl
+package ru.sakal.core_impl
 
 import dagger.Module
 import dagger.Provides
@@ -7,7 +7,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import ru.devivanov.core_impl.entity.ApiConstants
+import ru.sakal.core_impl.entity.ApiConstants
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 

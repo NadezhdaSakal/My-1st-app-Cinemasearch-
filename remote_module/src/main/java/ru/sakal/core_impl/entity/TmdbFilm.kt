@@ -1,4 +1,4 @@
-package ru.devivanov.core_impl.entity
+package ru.sakal.core_impl.entity
 
 import com.google.gson.annotations.SerializedName
 

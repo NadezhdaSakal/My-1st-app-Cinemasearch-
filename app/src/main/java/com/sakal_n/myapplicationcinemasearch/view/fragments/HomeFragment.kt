@@ -15,7 +15,6 @@ import com.sakal_n.myapplicationcinemasearch.databinding.FragmentHomeBinding
 import com.sakal_n.myapplicationcinemasearch.utils.AnimationHelper
 import com.sakal_n.myapplicationcinemasearch.utils.AutoDisposable
 import com.sakal_n.myapplicationcinemasearch.utils.addTo
-import com.sakal_n.myapplicationcinemasearch.view.MainActivity
 import com.sakal_n.myapplicationcinemasearch.view.rv_adapters.FilmListRecyclerAdapter
 import com.sakal_n.myapplicationcinemasearch.view.rv_adapters.TopSpacingItemDecoration
 import com.sakal_n.myapplicationcinemasearch.viewmodel.HomeFragmentViewModel
