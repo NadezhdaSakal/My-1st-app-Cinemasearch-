@@ -14,6 +14,8 @@ import com.sakal_n.myapplicationcinemasearch.view.notifications.NotificationCons
 
 class App : Application() {
     lateinit var dagger: AppComponent
+    var isPromoShown = false
+
 
 
     override fun onCreate() {
