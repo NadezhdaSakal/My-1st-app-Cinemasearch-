@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "550317442579",
+    "project_id": "cinrmasearch",
+    "storage_bucket": "cinrmasearch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550317442579:android:239558246905eef885a1e6",
+        "android_client_info": {
+          "package_name": "com.sakal_n.myapplicationcinemasearch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550317442579-d13fhtts5hu3cpavnhka8m04rffqcqnv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sakal_n.myapplicationcinemasearch",
+            "certificate_hash": "9f6753cae1c94c1c5613849aa869cba1ec6a59a6"
+          }
+        },
+        {
+          "client_id": "550317442579-135ekdmmrjmiikit4001lr1t4l0oblr5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA86qse1Uqul7y_Bfz1olRJi9g_vgtaz7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550317442579-135ekdmmrjmiikit4001lr1t4l0oblr5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
